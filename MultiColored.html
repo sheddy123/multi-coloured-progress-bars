@@ -81,6 +81,46 @@
         color: white;
         cursor: pointer;
       }
+      #myBar {
+        width: 50%;
+        height: 37px;
+        background-color: #04aa6d;
+        text-align: center; /* To center it horizontally (if you want) */
+        line-height: 30px; /* To center it vertically */
+        color: white;
+      }
+      #myBar1 {
+        width: 50%;
+        height: 37px;
+        background-color: rgb(206, 43, 43);
+        text-align: center; /* To center it horizontally (if you want) */
+        line-height: 30px; /* To center it vertically */
+        color: white;
+      }
+      #myBar2 {
+        width: 50%;
+        height: 37px;
+        background-color: white;
+        text-align: center; /* To center it horizontally (if you want) */
+        line-height: 30px; /* To center it vertically */
+        color: black;
+      }
+      #myBar3 {
+        width: 50%;
+        height: 37px;
+        background-color: rgb(122, 122, 247);
+        text-align: center; /* To center it horizontally (if you want) */
+        line-height: 30px; /* To center it vertically */
+        color: white;
+      }
+      #myBar4 {
+        width: 50%;
+        height: 37px;
+        background-color: rgb(236, 236, 206);
+        text-align: center; /* To center it horizontally (if you want) */
+        line-height: 30px; /* To center it vertically */
+        color: white;
+      }
     </style>
   </head>
   <body>
@@ -88,12 +128,12 @@
     <br />
     <br />
     <div class="progressa">
-      <div class="progressab" style="background-color: rgb(178, 222, 75)"></div>
+      <div id="myBar">50%</div>
     </div>
-    <div class="progressb"></div>
-    <div class="progressc"></div>
-    <div class="progressd"></div>
-    <div class="progresse"></div>
-    <button class="btnFinish">FINISH</button>
+    <div class="progressb"><div id="myBar1">50%</div></div>
+    <div class="progressc"><div id="myBar2">50%</div></div>
+    <div class="progressd"><div id="myBar3">50%</div></div>
+    <div class="progresse"><div id="myBar4">50%</div></div>
+    <button class="btnFinish" onclick="move()">FINISH</button>
   </body>
 </html>

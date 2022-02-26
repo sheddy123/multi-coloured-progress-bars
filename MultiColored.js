@@ -1,13 +1,19 @@
-var progressval = 55;
-var elm = document.getElementsByClassName('progressab')[0];
-elm.style.width = progressval + '%';
-
-elm.innerText = "You're " + progressval + '% There!';
-
-if (progressval > 90 && progressval <= 100) {
-  elm.style.backgroundColor = 'blue';
-} else if (progressval > 50 && progressval < 90) {
-  elm.style.backgroundColor = 'green';
-} else if (progressval <= 50) {
-  elm.style.backgroundColor = 'red';
+var i = 0;
+function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById('myBar');
+    var width = 10;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + '%';
+        elem.innerHTML = width + '%';
+      }
+    }
+  }
 }
